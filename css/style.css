@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "chaney";
+  src: url(../fonts/chaney-ultraextended-webfont.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100vh;
+  width: 100%;
+}
+.main {
+  min-height: 100vh;
+  width: 100%;
+}
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(250, 198, 8);
+  animation: back 3s;
+}
+.spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 10vw;
+  font-family: "chaney";
+  transform: translate(-50%, -50%) rotate(-9deg);
+
+  -webkit-text-stroke-width: 0.15vh;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: #fff;
+  outline: none;
+  font-weight: 1000;
+}
+
+.loader h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-9deg);
+  font-size: 5vw;
+  font-family: "chaney";
+  color: #fff;
+}
+.Loading {
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%) rotate(-9deg);
+  background-color: #fff;
+  width: 50%;
+  bottom: -62%;
+  border-radius: 4px;
+  height: 10px;
+  display: inline-block;
+}
+.Loading::after {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  height: 100%;
+  border-radius: 4px;
+  animation: load 3s;
+}
+
+@keyframes load {
+  0% {
+    width: 0%;
+    background-color: #a28089;
+  }
+  25% {
+    width: 25%;
+    background-color: #a02deb;
+  }
+  50% {
+    width: 50%;
+    background-color: #d0bdf4;
+  }
+  75% {
+    width: 75%;
+    background-color: #d2d2d2;
+  }
+  100% {
+    width: 100%;
+    background-color: rgb(250, 198, 8);
+  }
+}
+@keyframes back {
+  0% {
+    background-color: #a28089;
+  }
+  25% {
+    background-color: #a02deb;
+  }
+  50% {
+    background-color: #d0bdf4;
+  }
+  75% {
+    background-color: #d2d2d2;
+  }
+  100% {
+    background-color: rgb(250, 198, 8);
+  }
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/back.jpg);
+  background-size: cover;
+  background-position: bottom;
+  opacity: 0;
+  overflow: hidden;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.5s;
+  z-index: 99;
+}
+#imgDonut {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12vw;
+  animation: anim 2s ease-in-out alternate infinite;
+  opacity: 0;
+}
+
+#imgS {
+  position: absolute;
+  width: 9vw;
+  top: 25%;
+  left: 18%;
+  animation: letter 1.9s ease-in-out alternate infinite;
+}
+#imgP {
+  position: absolute;
+  width: 9vw;
+  top: 35%;
+  left: 23%;
+  animation: letter 1.8s ease-in-out alternate infinite;
+}
+#imgI {
+  position: absolute;
+  width: 9vw;
+  top: 25%;
+  left: 28%;
+  animation: letter 1.9s ease-in-out alternate infinite;
+}
+#imgC {
+  position: absolute;
+  width: 9vw;
+  top: 35%;
+  left: 33%;
+  animation: letter 1.8s ease-in-out alternate infinite;
+}
+#imgO {
+  position: absolute;
+  width: 9vw;
+  top: 25%;
+  left: 58%;
+  animation: letter 1.9s ease-in-out alternate infinite;
+}
+#imgD {
+  position: absolute;
+  width: 9vw;
+  top: 35%;
+  left: 65%;
+  animation: letter 1.8s ease-in-out alternate infinite;
+}
+#imgE {
+  position: absolute;
+  width: 9vw;
+  top: 25%;
+  left: 70%;
+  animation: letter 1.9s ease-in-out alternate infinite;
+}
+#imgR {
+  position: absolute;
+  width: 9vw;
+  top: 35%;
+  left: 77%;
+  animation: letter 1.8s ease-in-out alternate infinite;
+}
+
+.explore {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 75.6%;
+  width: 7vw;
+  height: 2vw;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 32px 0rgba (229, 116, 45, 0.37);
+  backdrop-filter: blur (4px);
+  -webkit-backdrop-filter: blur (4px);
+  border-radius: 10px;
+  font-size: 0.5vw;
+  cursor: pointer;
+}
+.explore h1 {
+  color: #ffffff;
+}
+@keyframes anim {
+  from {
+    margin-top: -1vw;
+  }
+  to {
+    margin-top: 1vw;
+  }
+}
+@keyframes letter {
+  from {
+    margin-top: 0vw;
+  }
+  to {
+    margin-top: 1vw;
+  }
+}
